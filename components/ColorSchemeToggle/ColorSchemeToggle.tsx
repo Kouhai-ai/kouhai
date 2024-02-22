@@ -5,7 +5,11 @@ import { ActionIcon, useMantineColorScheme } from '@mantine/core';
 import { IconMoon, IconSun } from '@tabler/icons-react';
 import classes from './ColorSchemeToggle.module.css';
 
-export function ColorSchemeToggle() {
+interface ColorSchemeToggleProps {
+  size?: string | number;
+}
+
+export function ColorSchemeToggle({ size = 'lg' }: ColorSchemeToggleProps) {
   const { colorScheme, setColorScheme } = useMantineColorScheme();
 
   return (
@@ -13,9 +17,10 @@ export function ColorSchemeToggle() {
       variant="default"
       aria-label="Toggle theme"
       onClick={() => setColorScheme(colorScheme === 'light' ? 'dark' : 'light')}
+      size={size}
     >
-      <IconSun className={cx(classes.icon, classes.light)} stroke={1.5} />
-      <IconMoon className={cx(classes.icon, classes.dark)} stroke={1.5} />
+      <IconSun className={cx(classes.icon, classes.light)} size={size} stroke={1.5} />
+      <IconMoon className={cx(classes.icon, classes.dark)} size={size} stroke={1.5} />
     </ActionIcon>
   );
 }

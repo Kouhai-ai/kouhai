@@ -6,6 +6,8 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 export default withBundleAnalyzer({
   output: 'export',
+  basePath: '/kouhai',
+  assetPrefix: '/kouhai/',
   reactStrictMode: false,
   eslint: {
     ignoreDuringBuilds: true,

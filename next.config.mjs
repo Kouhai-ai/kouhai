@@ -6,6 +6,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 export default withBundleAnalyzer({
   output: 'export',
+  crossOrigin: 'anonymous',
   reactStrictMode: false,
   eslint: {
     ignoreDuringBuilds: true,

@@ -7,7 +7,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 export default withBundleAnalyzer({
   output: 'export',
   basePath: '',
-  assetPrefix: '/',
+  assetPrefix: '',
   reactStrictMode: false,
   eslint: {
     ignoreDuringBuilds: true,

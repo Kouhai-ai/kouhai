@@ -1,12 +1,12 @@
 'use client';
 
 import Image from 'next/image';
-import { AppShell, Box, Burger, Flex, Grid, SimpleGrid, Text, Title } from '@mantine/core';
+import { AppShell, Box, Burger, Flex, Grid, SimpleGrid, Text, Title, Transition, useMantineColorScheme } from '@mantine/core';
 import { IconBrandMantine } from '@tabler/icons-react';
 import { useDisclosure } from '@mantine/hooks';
 import { ColorSchemeToggle } from '@/components/ColorSchemeToggle/ColorSchemeToggle';
 
-import sprintVelocityGraph from '../public/sprint-velocity-graph.svg';
+import Hero from '@/components/Hero/Hero';
 
 export default function HomePage() {
   const [opened, { toggle }] = useDisclosure();
@@ -21,12 +21,12 @@ export default function HomePage() {
       padding="md"
     >
       <AppShell.Header>
-        <Burger
+        {/* <Burger
           opened={opened}
           onClick={toggle}
           hiddenFrom="sm"
           size="sm"
-        />
+        /> */}
         <Flex direction="row" align="center" h="100%" px={15} gap={7}>
             <IconBrandMantine size={30} />
             <Title order={1} size="h2">kouhai</Title>
@@ -38,17 +38,49 @@ export default function HomePage() {
       {/* <AppShell.Navbar p="md">Navbar</AppShell.Navbar> */}
 
       <AppShell.Main>
-        <Box w={700} mx="auto" my={150} style={{ textAlign: 'center' }}>
+        <div>
+          <Hero />
+          <ul className="circles">
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+            <li />
+          </ul>
+        </div>
+
+        {/* <Transition
+          mounted
+          transition="slide-up"
+          duration={400}
+          timingFunction="ease"
+        >
+          {(styles) => <div style={styles}><Hero /></div>}
+        </Transition> */}
+
+        {/* <Box w={700} mx="auto" my={150} style={{ textAlign: 'center' }}>
           <Title order={1} size="3em" textWrap="wrap">Your <span style={{ color: '#FF5733' }}>AI-powered</span> <br /> project management copilot</Title>
+          <div className="embla" ref={emblaRef}>
+            <div className="embla__container">
+              <div className="embla__slide">Slide 1</div>
+              <div className="embla__slide">Slide 2</div>
+              <div className="embla__slide">Slide 3</div>
+            </div>
+          </div>
           <br />
           <Text w={600} mx="auto" size="xl">
             Kouhai integrates with your version control system and issue tracker{' '}
             to automatically generate and link tickets to code, ensuring PMs always{' '}
             have the latest updates.
           </Text>
-        </Box>
+        </Box> */}
 
-        <SimpleGrid cols={3} mx={40}>
+        {/* <SimpleGrid cols={3} mx={40}>
           <Title order={2} size="h1">Summarize PRs</Title>
           <Title order={2} size="h1">Real-time updates</Title>
           <Title order={2} size="h1">Improve planning</Title>
@@ -63,9 +95,9 @@ export default function HomePage() {
             Gain insights on each engineer&lsquo;s expertise,{' '}
             enabling more optimal task assignment.
           </Text>
-        </SimpleGrid>
+        </SimpleGrid> */}
 
-        <Grid mx={40} my={150}>
+        {/* <Grid mx={40} my={150}>
           <Grid.Col span={4}>
             <Title order={1} size="3em" textWrap="wrap">Accelerate product velocity</Title>
             <br />
@@ -77,7 +109,7 @@ export default function HomePage() {
           <Grid.Col span={8}>
             <Image src={sprintVelocityGraph} alt="Sprint velocity graph" width={1000} />
           </Grid.Col>
-        </Grid>
+        </Grid> */}
       </AppShell.Main>
     </AppShell>
   );

@@ -1,4 +1,4 @@
-import { Box, Card, Flex, Image, SimpleGrid, Text } from '@mantine/core';
+import { Box, Card, Flex, Image, SimpleGrid, Text, Title } from '@mantine/core';
 import { motion } from 'framer-motion';
 import { useMediaQuery } from '@mantine/hooks';
 import classes from './IntegrationSection.module.css';
@@ -84,22 +84,10 @@ export default function IntegrationSection() {
 
                 </Flex>
               </Card>
-              {/* <Card shadow="md" padding="lg" radius="md">
-                <Card.Section>
-                  <Image
-                    src={imageSrc}
-                    height={100}
-                    alt={name}
-                  />
-                </Card.Section>
-
-                <Group justify="center" mt="md" mb="xs">
-                  <Text fw={700} size="xl">{name}</Text>
-                </Group>
-              </Card> */}
             </motion.div>
           ))}
         </SimpleGrid>
+        <Title mt={70} order={3}>...and more coming soon!</Title>
       </Box>
     </motion.div>
   );

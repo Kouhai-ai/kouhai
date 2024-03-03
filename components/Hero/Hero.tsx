@@ -7,7 +7,7 @@ import cx from 'clsx';
 import classes from './Hero.module.css';
 
 export default function Hero() {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 2000 })]);
 
   return (
     <motion.div

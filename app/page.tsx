@@ -6,6 +6,7 @@ import { ColorSchemeToggle } from '@/components/ColorSchemeToggle/ColorSchemeTog
 
 import Hero from '@/components/Hero/Hero';
 import FeatureSection from '@/components/FeatureSection/FeatureSection';
+import IntegrationSection from '@/components/IntegrationSection/IntegrationSection';
 
 export default function HomePage() {
   return (
@@ -53,19 +54,7 @@ export default function HomePage() {
         </div>
         <FeatureSection />
 
-        {/* <Grid mx={40} my={150}>
-          <Grid.Col span={4}>
-            <Title order={1} size="3em" textWrap="wrap">Accelerate product velocity</Title>
-            <br />
-            <Text size="xl">
-              Automate repetitive project management tasks so that engineers and PMs can spend{' '}
-              more time building the product.
-            </Text>
-          </Grid.Col>
-          <Grid.Col span={8}>
-            <Image src={sprintVelocityGraph} alt="Sprint velocity graph" width={1000} />
-          </Grid.Col>
-        </Grid> */}
+        <IntegrationSection />
       </AppShell.Main>
     </AppShell>
   );

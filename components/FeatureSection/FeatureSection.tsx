@@ -9,6 +9,24 @@ interface CardData {
   imageSrc: string;
 }
 
+const cardData: CardData[] = [
+  {
+    title: 'Accelerate product velocity',
+    description: 'Kouhai analyzes PRs and summarizes code changes to provide context for non-technical team members.',
+    imageSrc: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png',
+  },
+  {
+    title: 'Real-time updates',
+    description: 'Automatically sync tickets in your issue tracker as code is being pushed.',
+    imageSrc: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png',
+  },
+  {
+    title: 'Improve planning',
+    description: 'Gain insights on each engineer\'s expertise, enabling more optimal task assignment.',
+    imageSrc: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png',
+  },
+];
+
 export default function FeatureSection() {
   const lessThan1100 = useMediaQuery('(max-width: 1100px)');
   const lessThan800 = useMediaQuery('(max-width: 800px)');
@@ -24,23 +42,6 @@ export default function FeatureSection() {
     gridCols = 1;
   }
 
-  const cardData: CardData[] = [
-    {
-      title: 'Accelerate product velocity',
-      description: 'Kouhai analyzes PRs and summarizes code changes to provide context for non-technical team members.',
-      imageSrc: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png',
-    },
-    {
-      title: 'Real-time updates',
-      description: 'Automatically sync tickets in your issue tracker as code is being pushed.',
-      imageSrc: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png',
-    },
-    {
-      title: 'Improve planning',
-      description: 'Gain insights on each engineer\'s expertise, enabling more optimal task assignment.',
-      imageSrc: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png',
-    },
-  ];
   return (
     <motion.div
       initial="hidden"

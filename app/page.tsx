@@ -1,15 +1,13 @@
 'use client';
 
-import Image from 'next/image';
-import { AppShell, Box, Burger, Flex, Grid, SimpleGrid, Text, Title, Transition, useMantineColorScheme } from '@mantine/core';
+import { AppShell, Flex, Title } from '@mantine/core';
 import { IconBrandMantine } from '@tabler/icons-react';
-import { useDisclosure } from '@mantine/hooks';
 import { ColorSchemeToggle } from '@/components/ColorSchemeToggle/ColorSchemeToggle';
 
 import Hero from '@/components/Hero/Hero';
+import FeatureSection from '@/components/FeatureSection/FeatureSection';
 
 export default function HomePage() {
-  const [opened, { toggle }] = useDisclosure();
   return (
     <AppShell
       header={{ height: 60 }}
@@ -53,49 +51,7 @@ export default function HomePage() {
             <li />
           </ul>
         </div>
-
-        {/* <Transition
-          mounted
-          transition="slide-up"
-          duration={400}
-          timingFunction="ease"
-        >
-          {(styles) => <div style={styles}><Hero /></div>}
-        </Transition> */}
-
-        {/* <Box w={700} mx="auto" my={150} style={{ textAlign: 'center' }}>
-          <Title order={1} size="3em" textWrap="wrap">Your <span style={{ color: '#FF5733' }}>AI-powered</span> <br /> project management copilot</Title>
-          <div className="embla" ref={emblaRef}>
-            <div className="embla__container">
-              <div className="embla__slide">Slide 1</div>
-              <div className="embla__slide">Slide 2</div>
-              <div className="embla__slide">Slide 3</div>
-            </div>
-          </div>
-          <br />
-          <Text w={600} mx="auto" size="xl">
-            Kouhai integrates with your version control system and issue tracker{' '}
-            to automatically generate and link tickets to code, ensuring PMs always{' '}
-            have the latest updates.
-          </Text>
-        </Box> */}
-
-        {/* <SimpleGrid cols={3} mx={40}>
-          <Title order={2} size="h1">Summarize PRs</Title>
-          <Title order={2} size="h1">Real-time updates</Title>
-          <Title order={2} size="h1">Improve planning</Title>
-          <Text size="xl">
-            Kouhai analyzes PRs and summarizes code changes to provide{' '}
-            context for non-technical team members.
-          </Text>
-          <Text size="xl">
-            Automatically sync tickets in your issue tracker as code is being pushed.
-          </Text>
-          <Text size="xl">
-            Gain insights on each engineer&lsquo;s expertise,{' '}
-            enabling more optimal task assignment.
-          </Text>
-        </SimpleGrid> */}
+        <FeatureSection />
 
         {/* <Grid mx={40} my={150}>
           <Grid.Col span={4}>

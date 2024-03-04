@@ -12,7 +12,7 @@ interface CardData {
 const cardData: CardData[] = [
   {
     title: 'Summarize PRs',
-    description: 'Kouhai analyzes PRs and summarizes code changes to provide context for non-technical team members.',
+    description: 'Summarizes code changes to provide context for non-technical team members.',
     imageSrc: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-4.png',
   },
   {

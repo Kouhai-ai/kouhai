@@ -9,7 +9,7 @@ interface ColorSchemeToggleProps {
   size?: string | number;
 }
 
-export function ColorSchemeToggle({ size = 'lg' }: ColorSchemeToggleProps) {
+export function ColorSchemeToggle({ size = '2.1em' }: ColorSchemeToggleProps) {
   const { colorScheme, setColorScheme } = useMantineColorScheme();
 
   return (

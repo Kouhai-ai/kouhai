@@ -13,17 +13,17 @@ const cardData: CardData[] = [
   {
     title: 'Summarize PRs',
     description: 'Kouhai analyzes PRs and summarizes code changes to provide context for non-technical team members.',
-    imageSrc: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png',
+    imageSrc: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-4.png',
   },
   {
     title: 'Real-time updates',
     description: 'Automatically sync tickets in your issue tracker as code is being pushed.',
-    imageSrc: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png',
+    imageSrc: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-6.png',
   },
   {
     title: 'Improve planning',
     description: 'Gain insights on each engineer\'s expertise, enabling more optimal task assignment.',
-    imageSrc: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png',
+    imageSrc: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-7.png',
   },
 ];
 
@@ -58,7 +58,7 @@ export default function FeatureSection() {
           fw={700}
           className={classes.title}
           variant="gradient"
-          gradient={{ from: 'yellow', to: 'red', deg: 0 }}
+          gradient={{ from: 'red', to: 'violet', deg: 90 }}
           mb={50}
         >
           Accelerate product velocity
@@ -66,7 +66,7 @@ export default function FeatureSection() {
 
         <SimpleGrid w={gridWidth} mx="auto" cols={gridCols} spacing={50}>
           {cardData.map(({ title, description, imageSrc }) => (
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1.05 }}>
+            <motion.div key={title} whileHover={{ scale: 1.05 }} whileTap={{ scale: 1.05 }}>
               <Card shadow="md" padding="lg" radius="md">
                 <Card.Section>
                   <Image

@@ -58,7 +58,7 @@ export default function IntegrationSection() {
           fw={700}
           className={classes.title}
           variant="gradient"
-          gradient={{ from: 'yellow', to: 'lime', deg: 90 }}
+          gradient={{ from: 'indigo', to: 'green', deg: 90 }}
           mb={50}
         >
           Seamless integrations
@@ -66,7 +66,7 @@ export default function IntegrationSection() {
 
         <SimpleGrid w={gridWidth} mx="auto" cols={gridCols} spacing={50}>
           {integrationData.map(({ name, description, imageSrc }) => (
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1.05 }}>
+            <motion.div key={name} whileHover={{ scale: 1.05 }} whileTap={{ scale: 1.05 }}>
               <Card shadow="md" padding="lg" radius="md">
                 <Flex align="center">
                   <Image
